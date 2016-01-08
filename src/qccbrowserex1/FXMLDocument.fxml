@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="608.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="qccbrowserex1.FXMLDocumentController">
+  <children>
+    <VBox prefHeight="199.9998779296875" prefWidth="319.9998779296875" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" text="New" fx:id="userCreateNewFile" />
+                <MenuItem mnemonicParsing="false" text="Open" fx:id="userOpenFile" />
+                <MenuItem mnemonicParsing="false" text="Save" fx:id="userSaveFile" />
+                <MenuItem mnemonicParsing="false" text="Close" fx:id="userCloseFile" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Recording Tools">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Start Recording" fx:id="startRecording" />
+                <MenuItem mnemonicParsing="false" text="Stop Recording" fx:id="stopRecording" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <HBox minHeight="25.0" prefHeight="25.0" prefWidth="558.0">
+          <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClickAction" text="B" />
+            <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#forwardButtonClickAction" text="F" />
+            <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stopButtonClickAction" text="S" />
+            <Button id="stopButton" fx:id="goButton" maxWidth="-1.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#goButtonClickAction" prefWidth="-1.0" text="GO" />
+            <ComboBox id="urlAddress" fx:id="comboBox1" editable="true" maxWidth="1.7976931348623157E308" onAction="#goButtonClickAction" prefHeight="25.000099999997474" prefWidth="532.0" HBox.hgrow="ALWAYS">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </ComboBox>
+          </children>
+        </HBox>
+        <SplitPane dividerPositions="0.8084632516703786" focusTraversable="true" orientation="VERTICAL" prefHeight="381.0" prefWidth="558.0" VBox.vgrow="ALWAYS">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                <TabPane id="tabPane" fx:id="tabPane1" prefHeight="353.0" prefWidth="606.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <tabs>
+                    <Tab fx:id="newTab1" text="newTab">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <WebView fx:id="webView1" prefHeight="307.0" prefWidth="606.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                <TextArea fx:id="recordPane1" prefHeight="81.0" prefWidth="606.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
