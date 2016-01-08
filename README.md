@@ -1,3 +1,3 @@
 # QCCWebBrowser
 Web browser created using JavaFX
-Created by Gabriel Emery
+- Created by Gabriel Emery
